@@ -52,8 +52,8 @@ public class Escola {
 
 
         System.out.printf("%nTurma %s de %s :%n", turma.getSerie(), turma.getAnoLetivo());
-        for(Aluno a : turma.listaAlunos ) {
-            System.out.println(a);
+        for(Aluno alunos : turma.listaAlunos ) {
+            System.out.println(alunos);
         }
 
 

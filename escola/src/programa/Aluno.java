@@ -41,7 +41,7 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return "programa.Aluno = " + nome + "\n" +
+        return "Aluno = " + nome + "\n" +
                 "CPF = " + cpf + "\n" +
                 "Idade =" + idade + "\n" +
                 "Endereço: \n" + endereco.toString();
