@@ -9,7 +9,6 @@ public class Escola {
         String nome = "programa.Escola SG Sistemas";
         Endereco endereco;
         Scanner sc = new Scanner(System.in);
-        sc.equals()
         System.out.printf("*** Bem vindo ao sistema da %s *** %n", nome);
         Endereco escolaEndereco = new Endereco("Maringá", "Paraná");
         System.out.printf("Digite informações sobre o endereço da escola: %n");
