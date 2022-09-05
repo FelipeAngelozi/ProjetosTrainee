@@ -35,6 +35,7 @@ public class Gestor {
                 }
             } catch (Exception ex) {
                 System.out.println("\nCodigo de produto inválido!");
+
             }
 
             compra.produtos.add(produto);
