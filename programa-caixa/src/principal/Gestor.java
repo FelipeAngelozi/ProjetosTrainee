@@ -2,6 +2,7 @@ package principal;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Gestor {
@@ -43,8 +44,23 @@ public class Gestor {
                 System.out.println(produto);
             }
         }
-        ComparadorNumerico comparadorNumerico = new ComparadorNumerico();
-        ComparadorString comparadorString = new ComparadorString();
+
+        Comparator<Produto> comparadorString = new Comparator<Produto>() {
+
+            public int compare(Produto produto1, Produto produto2) {
+                String nome1 = produto1.getNome();
+                String nome2 = produto2.getNome();
+                return nome1.compareTo(nome2);
+            }
+        };
+
+        Comparator<Produto> comparadorNumerico = new Comparator<Produto>() {
+
+            @Override
+            public int compare(Produto produto1, Produto produto2) {
+                return Double.compare(produto1.getValor(), produto2.getValor());
+            }
+        };
 
         Recibo recibo = new Recibo();
         compra.produtos.sort(comparadorNumerico);
