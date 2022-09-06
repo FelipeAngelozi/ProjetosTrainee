@@ -43,6 +43,8 @@ public class Gestor {
                 System.out.println(produto);
             }
         }
+        Comparador comparador = new Comparador();
+        compra.produtos.sort(comparador);
 
         Recibo recibo = new Recibo();
         recibo.notaFiscal(compra);
