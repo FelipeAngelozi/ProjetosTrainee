@@ -28,12 +28,7 @@ public class Compra {
         produtos = new ArrayList<Produto>();
     }
 
-    public void getProdutosLista() {
-        for (Produto produto : produtos) {
-            this.total += produto.getValor();
-            System.out.println(produto.toString());
-        }
-    }
+
 
     public double getTotal() {
         return this.total;
