@@ -45,30 +45,20 @@ public class Gestor {
             }
         }
 
-        Comparator<Produto> comparadorString = new Comparator<Produto>() {
-
-            public int compare(Produto produto1, Produto produto2) {
-                String nome1 = produto1.getNome();
-                String nome2 = produto2.getNome();
-                return nome1.compareTo(nome2);
-            }
-        };
-
-        Comparator<Produto> comparadorNumerico = new Comparator<Produto>() {
-
-            @Override
-            public int compare(Produto produto1, Produto produto2) {
-                return Double.compare(produto1.getValor(), produto2.getValor());
-            }
-        };
-
+       compra.produtos.sort( (produto1 , produto2) -> {
+           String produto1nome = produto1.getNome();
+           String produto2nome = produto2.getNome();
+           return produto1nome.compareTo(produto2nome);
+       });
         Recibo recibo = new Recibo();
-        compra.produtos.sort(comparadorNumerico);
         recibo.notaFiscal(compra);
-        compra.produtos.sort(comparadorString);
+
+        compra.produtos.sort( (produto1, produto2) -> Double.compare(produto1.getValor(), produto2.getValor()));
         recibo.notaFiscal(compra);
+
         compra.produtos.sort(null);
         recibo.notaFiscal(compra);
+
         Collections.reverse(compra.produtos);
         recibo.notaFiscal(compra);
     }
