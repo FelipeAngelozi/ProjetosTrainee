@@ -29,6 +29,7 @@ public class Gestor {
             System.out.println("Digite o código do produto (cod 0000 para terminar compra):\n");
             System.out.print("Codigo: ");
             try {
+                sc = new Scanner(System.in);
                 produto.setCodigo(sc.nextInt());
                 if (produto.codigo == 0000) {
                     break;
@@ -37,9 +38,10 @@ public class Gestor {
                 System.out.println("\nCodigo de produto inválido!");
 
             }
-
-            compra.produtos.add(produto);
-            System.out.println(produto);
+            if (produto.nome != null) {
+                compra.produtos.add(produto);
+                System.out.println(produto);
+            }
         }
 
         Recibo recibo = new Recibo();
