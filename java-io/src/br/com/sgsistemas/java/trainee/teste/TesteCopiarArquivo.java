@@ -6,19 +6,19 @@ public class TesteCopiarArquivo {
     public static void main(String[] args) throws IOException {
 
         //entrada
-        FileInputStream fileInputStream = new FileInputStream("lorem ipsum");
-        InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+        InputStream fileInputStream = System.in; //new FileInputStream("lorem ipsum");
+        Reader inputStreamReader = new InputStreamReader(fileInputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         //saida
-        FileOutputStream fileOutputStream = new FileOutputStream("lorem ipsum2");
-        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
+        OutputStream fileOutputStream = System.out; //new FileOutputStream("lorem ipsum2");
+        Writer outputStreamWriter = new OutputStreamWriter(fileOutputStream);
         BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
         //copia
 
         String loremIpsum = bufferedReader.readLine();
 
-        while (loremIpsum != null) {
+        while (loremIpsum != null && !loremIpsum.isEmpty()) {
             bufferedWriter.write(loremIpsum);
             bufferedWriter.newLine();
             loremIpsum = bufferedReader.readLine();
