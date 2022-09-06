@@ -1,6 +1,9 @@
 package principal;
 
-public class Produto {
+import java.util.Date;
+
+public class Produto implements Comparable <Produto> {
+
 
     double valor;
     int codigo = 0;
@@ -32,9 +35,18 @@ public class Produto {
         }
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     @Override
     public String toString() {
         return "Produto = " + this.nome + "  |  " +
                 "Preço = " + this.valor;
+    }
+
+    @Override
+    public int compareTo(Produto outroProduto) {
+        return Double.compare(this.valor, outroProduto.valor);
     }
 }

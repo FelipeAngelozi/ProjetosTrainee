@@ -1,7 +1,7 @@
 package principal;
 
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Gestor {
@@ -43,11 +43,17 @@ public class Gestor {
                 System.out.println(produto);
             }
         }
-        Comparador comparador = new Comparador();
-        compra.produtos.sort(comparador);
+        ComparadorNumerico comparadorNumerico = new ComparadorNumerico();
+        ComparadorString comparadorString = new ComparadorString();
 
         Recibo recibo = new Recibo();
+        compra.produtos.sort(comparadorNumerico);
         recibo.notaFiscal(compra);
-
+        compra.produtos.sort(comparadorString);
+        recibo.notaFiscal(compra);
+        compra.produtos.sort(null);
+        recibo.notaFiscal(compra);
+        Collections.reverse(compra.produtos);
+        recibo.notaFiscal(compra);
     }
 }

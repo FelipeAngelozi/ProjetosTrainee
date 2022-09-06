@@ -2,7 +2,7 @@ package principal;
 
 import java.util.Comparator;
 
-public class Comparador implements Comparator<Produto> {
+public class ComparadorNumerico implements Comparator<Produto> {
 
     @Override
     public int compare(Produto produto1, Produto produto2) {
