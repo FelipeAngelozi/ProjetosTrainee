@@ -25,9 +25,10 @@ public class TestaCursoComAluno {
         javaColecoes.matricula(aluno5);
 
         System.out.println("Alunos matriculados:");
-
+//     uso do map
 
         System.out.println(javaColecoes.buscarMatriculado(124));
+
         //teste de uso do iterator
 //        Iterator<Aluno> iterator = javaColecoes.getAlunos().iterator();
 //

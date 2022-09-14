@@ -23,7 +23,6 @@ public class Curso {
     public String getInstrutor() {
         return instrutor;
     }
-
     public List<Aula> getAulas() {
         return Collections.unmodifiableList(aulas);
     }
