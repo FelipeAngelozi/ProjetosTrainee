@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class TesteListagem2 {
     public static void main(String[] args) throws SQLException {
 
-        PreparedStatement preparedStatement = ConnectionFactory.obterConexao().prepareStatement("SELECT * FROM produto");
+        PreparedStatement preparedStatement = ConnectionFactory.obterConexao().prepareStatement("SELECT * FROM produto ORDER BY id");
 
         preparedStatement.execute();
 
