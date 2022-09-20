@@ -2,6 +2,8 @@ package br.com.sgsistemas.trainee.loja.modelo;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "produtos")
@@ -9,17 +11,30 @@ public class Produto {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long id;
+    private Integer id;
     private String nome;
     //@Column(name = "descrição")
     private String descricao;
     private BigDecimal preco;
+    private LocalDate dataCadastro = LocalDate.now();
+    @ManyToOne
+    private Categoria categoria;
 
-    public long getId() {
+    public Produto() {
+    }
+
+    public Produto(String nome, String descricao, BigDecimal preco, Categoria categoria) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.categoria = categoria;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -45,5 +60,21 @@ public class Produto {
 
     public void setPreco(BigDecimal preco) {
         this.preco = preco;
+    }
+
+    public LocalDate getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public void setDataCadastro(LocalDate dataCadastro) {
+        this.dataCadastro = dataCadastro;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }
