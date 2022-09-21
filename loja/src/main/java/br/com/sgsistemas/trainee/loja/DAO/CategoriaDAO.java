@@ -27,7 +27,7 @@ public class CategoriaDAO {
         this.entityManager.remove(categoria);
     }
 
-    public void buscarCategoriaPorId(Integer id) {
+    public Categoria buscarCategoriaPorId(Integer id) { return
         this.entityManager.find(Categoria.class, id);
     }
 
