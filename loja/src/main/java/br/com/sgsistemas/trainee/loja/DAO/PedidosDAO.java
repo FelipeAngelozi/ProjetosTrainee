@@ -36,7 +36,7 @@ public class PedidosDAO {
         return entityManager.createQuery("SELECT ped FROM Pedidos ped", Pedidos.class).getResultList();
     }
 
-    public List<Pedidos> bucarPedidoPorCliente (Clientes clientes) {
-        return entityManager.createQuery("SELECT ped from Pedido ped WHERE ped.clientes = :clientes", Pedidos.class).getResultList()
+    public List<Pedidos> bucarPedidoPorCliente(Clientes clientes) {
+        return entityManager.createQuery("SELECT ped from Pedido ped WHERE ped.clientes = :clientes", Pedidos.class).setParameter("clientes", clientes).getResultList();
     }
 }

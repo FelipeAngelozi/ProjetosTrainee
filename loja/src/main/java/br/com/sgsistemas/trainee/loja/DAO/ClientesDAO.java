@@ -27,8 +27,8 @@ public class ClientesDAO {
         this.entityManager.remove(clientes);
     }
 
-    public void buscarCliente(Integer id) {
-        this.entityManager.find(Clientes.class, id);
+    public Clientes buscarCliente(Integer id) {
+        return this.entityManager.find(Clientes.class, id);
     }
 
     public List<Clientes> listarCliente() {
