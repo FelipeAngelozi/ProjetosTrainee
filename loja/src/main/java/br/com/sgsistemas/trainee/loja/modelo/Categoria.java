@@ -11,6 +11,7 @@ public class Categoria {
     private BigInteger id;
     private String nome;
 
+
     public Categoria() {
     }
 
