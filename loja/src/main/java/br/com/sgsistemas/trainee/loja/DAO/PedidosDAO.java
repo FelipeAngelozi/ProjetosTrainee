@@ -1,5 +1,6 @@
 package br.com.sgsistemas.trainee.loja.DAO;
 
+import br.com.sgsistemas.trainee.loja.modelo.Clientes;
 import br.com.sgsistemas.trainee.loja.modelo.Pedidos;
 import br.com.sgsistemas.trainee.loja.util.JPAUtil;
 
@@ -33,5 +34,9 @@ public class PedidosDAO {
 
     public List<Pedidos> listarPedidos() {
         return entityManager.createQuery("SELECT ped FROM Pedidos ped", Pedidos.class).getResultList();
+    }
+
+    public List<Pedidos> bucarPedidoPorCliente (Clientes clientes) {
+        return entityManager.createQuery("SELECT ped from Pedido ped WHERE ped.clientes = :clientes", Pedidos.class).getResultList()
     }
 }
