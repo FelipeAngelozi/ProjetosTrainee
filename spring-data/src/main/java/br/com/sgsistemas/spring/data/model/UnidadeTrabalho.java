@@ -1,6 +1,7 @@
 package br.com.sgsistemas.spring.data.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "unidade_trabalho")
@@ -11,9 +12,18 @@ public class UnidadeTrabalho {
     private Integer id;
     private String descricao;
     private String endereco;
-
+    @ManyToMany(mappedBy =  "unidadeTrabalhos", fetch = FetchType.EAGER)
+    private List<Funcionario> funcionarios;
     public Integer getId() {
         return id;
+    }
+
+    public List<Funcionario> getFuncionarios() {
+        return funcionarios;
+    }
+
+    public void setFuncionarios(List<Funcionario> funcionarios) {
+        this.funcionarios = funcionarios;
     }
 
     public void setId(Integer id) {

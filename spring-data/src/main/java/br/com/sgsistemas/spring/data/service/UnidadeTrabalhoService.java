@@ -19,9 +19,9 @@ public class UnidadeTrabalhoService {
     }
 
     public void iniciar(Scanner scanner) {
-
+        system = true;
         while (system) {
-            System.out.println("Qual ação em FUNCIONARIO dejesa executar?\n" +
+            System.out.println("Qual ação em UNIDADE TRABALHO dejesa executar?\n" +
                     "[0] - SAIR\n" +
                     "[1] - SALVAR\n" +
                     "[2] - ATUALIZAR\n" +
