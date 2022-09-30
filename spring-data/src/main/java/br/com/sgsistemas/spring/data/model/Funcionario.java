@@ -1,8 +1,12 @@
 package br.com.sgsistemas.spring.data.model;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "funcionario")
@@ -14,6 +18,31 @@ public class Funcionario {
     private String cpf;
     private BigDecimal salario;
     private String dataContratacao;
+    @ManyToOne
+    @JoinColumn(name= "cargo_id", nullable = false)
+    private Cargo cargo;
+    @Fetch(FetchMode.SELECT)
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "funcionario_unidades", joinColumns = {
+            @JoinColumn(name = "fk_funcionario") },
+            inverseJoinColumns =  { @JoinColumn(name = "fk_unidade") })
+    private List<UnidadeTrabalho> unidadeTrabalhos;
+
+    public Cargo getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(Cargo cargo) {
+        this.cargo = cargo;
+    }
+
+    public List<UnidadeTrabalho> getUnidadeTrabalhos() {
+        return unidadeTrabalhos;
+    }
+
+    public void setUnidadeTrabalhos(List<UnidadeTrabalho> unidadeTrabalhos) {
+        this.unidadeTrabalhos = unidadeTrabalhos;
+    }
 
     public Integer getId() {
         return id;

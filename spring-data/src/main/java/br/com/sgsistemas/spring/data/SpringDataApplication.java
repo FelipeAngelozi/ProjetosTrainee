@@ -36,7 +36,7 @@ public class SpringDataApplication implements CommandLineRunner {
         Scanner sc = new Scanner(System.in);
 
         while (system) {
-            System.out.println("Qual acao voce quer executar?\n" +
+            system = true; System.out.println("Qual acao voce quer executar?\n" +
                     "[0] - SAIR\n" +
                     "[1] - CARGO\n" +
                     "[2] - FUNCIONARIO\n" +
@@ -55,10 +55,11 @@ public class SpringDataApplication implements CommandLineRunner {
                 }
                 case 2: {
                     funcionarioService.iniciar(sc);
+                    break;
                 }
                 case 3: {
                     unidadeTrabalhoService.iniciar(sc);
-
+                    break;
                 }
 
             }

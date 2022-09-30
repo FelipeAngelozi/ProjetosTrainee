@@ -18,7 +18,7 @@ public class CargoService {
     }
 
     public void iniciar(Scanner scanner) {
-
+        system = true;
         while (system) {
             System.out.println("Qual ação em CARGO dejesa executar?\n" +
                     "[0] - SAIR\n" +
@@ -41,10 +41,12 @@ public class CargoService {
                 case 3: {
                     visualizar();
                     break;
-                } case 4: {
+                }
+                case 4: {
                     deletarPorId(scanner);
                     break;
-                } case 5: {
+                }
+                case 5: {
                     deletarTodos(scanner);
                     break;
                 }
