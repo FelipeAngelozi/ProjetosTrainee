@@ -2,6 +2,10 @@ package br.com.sgsistemas.spring.data.service;
 
 import br.com.sgsistemas.spring.data.model.Cargo;
 import br.com.sgsistemas.spring.data.repository.CargoRespository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Iterator;
@@ -39,7 +43,7 @@ public class CargoService {
                     break;
                 }
                 case 3: {
-                    visualizar();
+                    visualizar(scanner);
                     break;
                 }
                 case 4: {
@@ -64,11 +68,13 @@ public class CargoService {
     public void salvar(Scanner scanner) {
         scanner = new Scanner(System.in);
         System.out.println("Descricao do cargo:");
-        Cargo cargo = new Cargo();
         String descricao = scanner.nextLine();
-        cargo.setDescricao(descricao);
-        cargoRespository.save(cargo);
-        System.out.println("Salvo");
+        for (int i = 0; i < 1000; i++) {
+            Cargo cargo = new Cargo();
+            String descricao1 = descricao + " " + i;
+            cargo.setDescricao(descricao1);
+            cargoRespository.save(cargo);
+        }
     }
 
     public void atualizar(Scanner scanner) {
@@ -84,8 +90,16 @@ public class CargoService {
         cargoRespository.save(cargo);
     }
 
-    public void visualizar() {
-        Iterable<Cargo> cargos = cargoRespository.findAll();
+    public void visualizar(Scanner scanner) {
+        System.out.println("Qual pagina voce deseja visualizar:");
+        Integer page = scanner.nextInt();
+
+        Pageable pageable = PageRequest.of(page, 5 , Sort.by(Sort.Direction.ASC,"descricao" ));
+        Page<Cargo> cargos = cargoRespository.findAll(pageable);
+
+        System.out.println(cargos);
+        System.out.println("Pagina atual " + cargos.getNumber());
+        System.out.println("Total elemento " + cargos.getTotalElements());
         cargos.forEach(cargo -> System.out.println(cargo));
     }
 
