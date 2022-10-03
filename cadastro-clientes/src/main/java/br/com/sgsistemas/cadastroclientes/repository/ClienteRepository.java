@@ -13,6 +13,7 @@ import java.util.List;
 @Repository
 public interface ClienteRepository extends PagingAndSortingRepository<Cliente, Integer> {
 
-    @Query(value = "SELECT c.nome, c.data_nascimento from cliente c", nativeQuery = true)
+    @Query(nativeQuery = true,
+            value = "SELECT nome, datanascimento from cliente")
     List<ClienteDTO> findClienteNomeENasc();
 }

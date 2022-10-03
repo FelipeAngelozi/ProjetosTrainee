@@ -13,7 +13,7 @@ public class Cliente {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
-    @Column(name = "data_nascimento")
+    @Column(name = "datanascimento")
     private LocalDate dataNascimento;
     private BigDecimal limite;
     @OneToMany(mappedBy = "cliente")
