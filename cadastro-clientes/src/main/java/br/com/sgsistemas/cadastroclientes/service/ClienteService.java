@@ -53,6 +53,7 @@ public class ClienteService {
         System.out.println("Digite o ID do cliente que deseja alterar:");
         Integer clienteID = scanner.nextInt();
         System.out.println("Novo nome do cliente:");
+        scanner = new Scanner(System.in);
         String nomeCliente = scanner.nextLine();
         System.out.println("Nova data de nascimento:");
         String dataNascimentoString = scanner.nextLine();

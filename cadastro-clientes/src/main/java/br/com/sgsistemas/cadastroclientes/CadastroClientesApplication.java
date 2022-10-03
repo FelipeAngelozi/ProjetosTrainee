@@ -37,7 +37,7 @@ public class CadastroClientesApplication implements CommandLineRunner {
 //        clienteService.salvarCliente(scanner);
 //        enderecoService.salvarEndereço(scanner);
 
-        clienteService.visualizarClientePorPagina(scanner);
+        relatorioService.buscaFuncionarioNome();
 
 
     }
