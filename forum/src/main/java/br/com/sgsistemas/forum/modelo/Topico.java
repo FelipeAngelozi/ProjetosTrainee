@@ -4,21 +4,50 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+@Entity
 public class Topico {
 
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String titulo;
-	private String mensagem;
+	private String menssagem;
 	private LocalDateTime dataCriacao = LocalDateTime.now();
+	@Enumerated(EnumType.STRING)
 	private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
+	@ManyToOne
 	private Usuario autor;
+	@ManyToOne
 	private Curso curso;
+	@OneToMany(mappedBy = "topico")
 	private List<Resposta> respostas = new ArrayList<>();
+
+	public Topico() {
+	}
 
 	public Topico(String titulo, String mensagem, Curso curso) {
 		this.titulo = titulo;
-		this.mensagem = mensagem;
+		this.menssagem = mensagem;
 		this.curso = curso;
+	}
+
+	public Topico(Long id, String titulo, String menssagem, Curso curso) {
+		this.id = id;
+		this.titulo = titulo;
+		this.menssagem = menssagem;
+		this.curso = curso;
+	}
+
+	public Topico(Long id) {
+		this.id = id;
 	}
 
 	@Override
@@ -62,12 +91,12 @@ public class Topico {
 		this.titulo = titulo;
 	}
 
-	public String getMensagem() {
-		return mensagem;
+	public String getMenssagem() {
+		return menssagem;
 	}
 
-	public void setMensagem(String mensagem) {
-		this.mensagem = mensagem;
+	public void setMenssagem(String mensagem) {
+		this.menssagem = mensagem;
 	}
 
 	public LocalDateTime getDataCriacao() {
