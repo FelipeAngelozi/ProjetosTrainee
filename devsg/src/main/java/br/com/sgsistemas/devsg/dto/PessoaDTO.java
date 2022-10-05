@@ -2,17 +2,29 @@ package br.com.sgsistemas.devsg.dto;
 
 import br.com.sgsistemas.devsg.model.Cargo;
 import br.com.sgsistemas.devsg.model.Equipe;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import br.com.sgsistemas.devsg.model.Pessoa;
+import lombok.*;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Setter
-@Getter
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Data
 public class PessoaDTO {
 
+    private Integer id;
     private String nome;
-    private Cargo cargo;
+    private String nomeCargo;
+    private String nomeEquipe;
+
+    public PessoaDTO(Pessoa pessoa) {
+        this.id = pessoa.getId();
+        this.nome = pessoa.getName();
+        this.nomeCargo = pessoa.getCargo().toString();
+        this.nomeEquipe = pessoa.getEquipe().getNome();
+    }
+
+    public static List<PessoaDTO> converter(List<Pessoa> pessoas) {
+        return pessoas.stream().map(PessoaDTO::new).collect(Collectors.toList());
+    }
 }
