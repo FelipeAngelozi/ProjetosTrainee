@@ -2,6 +2,7 @@ package br.com.sgsistemas.udemyproject.pk;
 
 import br.com.sgsistemas.udemyproject.model.Order;
 import br.com.sgsistemas.udemyproject.model.Product;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.Embeddable;
@@ -16,9 +17,13 @@ public class OrderItemPK implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
+    @JsonIgnore
     private Order order;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
+    @JsonIgnore
     private Product product;
+
+
 }
