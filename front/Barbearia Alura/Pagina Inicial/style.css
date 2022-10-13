@@ -1,0 +1,39 @@
+body {
+    margin: 40px;
+    background-color: black;
+}
+.titulo{
+    background-color: #141414 ;
+    border: 2px solid chocolate;
+    color:  MintCream;
+    text-align: center;
+}
+.principal {
+    color: LightSteelBlue;
+    background-color: black;
+    text-align: center;
+}
+#frase1 {
+    color: MintCream;
+}
+#missao {
+    font-size : 20px
+}
+.beneficio {
+    background-color: black;
+    color: LightSteelBlue;
+    text-align: center;
+}   
+.imagembeneficio{
+    height: 500px;
+    width: 700px;
+    border: 2px solid chocolate;
+}
+.lista {
+    display: inline-block;
+    vertical-align:top;
+}
+.items {
+    font-style: italic;
+    text-align: justify;
+}
