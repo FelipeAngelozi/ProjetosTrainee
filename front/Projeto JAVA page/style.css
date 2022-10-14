@@ -1,0 +1,29 @@
+body {
+    background-color: #242322;
+    color: FloralWhite;
+    margin: 5px;
+    text-align: center;
+}
+.title {
+    background-color: black;
+    border: 2px solid #f08502;
+    color: steelblue;
+}
+
+.java-text {
+    display: inline-block;
+    width: 40%;
+    text-align: justify;
+}
+
+.java-logo {
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+}
+ul {
+    text-align: left;
+}
+a {
+    color: floralwhite;
+}
