@@ -4,11 +4,16 @@ export class Conta {
     _agencia;
     _saldo;
     _cliente;
+    _taxa = 1;
 
     constructor(saldo, agencia, cliente) {
         this.agencia = agencia;
         this.cliente = cliente;
         this.saldo = saldo;
+
+        if(this.constructor == Conta){
+            throw new Error("CLASSE ABSTRATA");
+        }
     }
 
     get agencia() {return this._agencia}
@@ -26,7 +31,12 @@ export class Conta {
         return this._saldo;
     }
 
-    sacar(valor) {
+    sacar(){
+        throw new Error("O METODO EH ABSTRATO, IMPLEMENTE")
+    }
+
+    _sacar(valor, taxa) {
+        valor = valor * taxa;
         if (valor > this._saldo) return;
         this._saldo -= valor;
         return this._saldo;

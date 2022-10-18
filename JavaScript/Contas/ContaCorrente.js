@@ -4,6 +4,7 @@ import { Conta } from "./Conta.js";
 export class ContaCorrente extends Conta{
     
     static numeroContas = 0;
+    _taxa = 1.1;
     
     constructor(saldo, agencia, cliente) {
         super (saldo, agencia, cliente);
@@ -11,8 +12,7 @@ export class ContaCorrente extends Conta{
     }
 
     sacar(valor) {
-        valor = valor * 1.1;
-        return super.sacar(valor);
+        return super._sacar(valor, this._taxa);
     }
 
 }

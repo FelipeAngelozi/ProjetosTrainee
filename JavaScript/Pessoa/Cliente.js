@@ -1,16 +1,15 @@
-export class Cliente {
-    nome;
-    idade;
+import { Pessoa } from "./Pessoa.js";
 
-    constructor(nome, idade){
-        this.nome = nome;
-        this.idade = idade;
-    };
+export class Cliente extends Pessoa{
 
-    get nome() {return this.nome};
-    set nome(nome) {this.nome = nome};
+    _senha;
 
-    get idade() {return this.idade}
-    set idade(idade) {this.idade = idade}
+    constructor(nome, idade) {
+        return super(nome, idade);
+    }
+
+    autenticar(senha) {
+        return this._senha == senha;
+    }
     
 }
