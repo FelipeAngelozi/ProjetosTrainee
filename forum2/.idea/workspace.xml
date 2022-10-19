@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0993b0f6-0875-4991-93b7-24b8b1830311" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/ForumApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/config/validacao/ErroDeFormularioDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/config/validacao/ErroValidacaoHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/controller/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/controller/TopicosController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/dto/TopicoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/form/TopicoForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/modelo/Curso.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/modelo/Resposta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/modelo/StatusTopico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/modelo/Topico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/modelo/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/repository/CursoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sgsistemas/forum/repository/TopicoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/sgsistemas/forum/ForumApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sg-saude/src/br/com/sgsistemas/sgsaude/principal/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sg-saude/src/br/com/sgsistemas/sgsaude/principal/Programa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sgERPDB/src/main/java/br/com/sgsistemas/trainee/sgERPDB/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sgERPDB/src/main/java/br/com/sgsistemas/trainee/sgERPDB/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2FdQJpDW8NusX1UjSJ2s7SZ1ynx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/sg/ProjetosTrainee/forum",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "f4b72619b23f85b11e9f01b1063fde56"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.ForumApplication">
+    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="ForumApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="forum2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.sgsistemas.forum.ForumApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForumApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="forum" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.sgsistemas.forum.ForumApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.All in generated-requests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0993b0f6-0875-4991-93b7-24b8b1830311" name="Changes" comment="" />
+      <created>1664819411688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664819411688</updated>
+      <workItem from="1664819412785" duration="43000" />
+      <workItem from="1664819464812" duration="6173000" />
+      <workItem from="1664881010515" duration="15224000" />
+      <workItem from="1664908026413" duration="2368000" />
+      <workItem from="1665432274935" duration="39000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

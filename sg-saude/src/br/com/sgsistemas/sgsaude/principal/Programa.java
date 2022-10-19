@@ -23,114 +23,114 @@ public class Programa {
         Scanner sc = new Scanner(System.in);
 
 
-        //######################### MEDICO #########################
-        Medico medico = new Medico();
-        MedicoDAO medicoDAO = new MedicoDAO();
+//        //######################### MEDICO #########################
+//        Medico medico = new Medico();
+//        MedicoDAO medicoDAO = new MedicoDAO();
 
-        medico.setNome("Medico Teste");
-        medico.setDataNascimento("11/11/11111");
-        medico.setIdEspecialidade(1);
-        medico.setCrm(1111);
-        medico.setCpf("111.111.111-11");
+//        medico.setNome("Medico Teste");
+//        medico.setDataNascimento("11/11/11111");
+//        medico.setIdEspecialidade(1);
+//        medico.setCrm(1111);
+//        medico.setCpf("111.111.111-11");
+//
+//        System.out.println("---------COMANDOS MÉDICO---------");
+////        medicoDAO.inserirMedico(medico);
+//        System.out.println("------------------");
+//        medicoDAO.listarMedico(medico);
+//        System.out.println("------------------");
+//        //passa a id no medico como parametro:
+//        medicoDAO.deletarMedico(0);
+//        System.out.println("------------------");
+//        medicoDAO.atualizarMedico(medico);
+//        System.out.println("------------------");
 
-        System.out.println("---------COMANDOS MÉDICO---------");
-        medicoDAO.inserirMedico(medico);
-        System.out.println("------------------");
-        medicoDAO.listarMedico(medico);
-        System.out.println("------------------");
-        //passa a id no medico como parametro:
-        medicoDAO.deletarMedico(0);
-        System.out.println("------------------");
-        medicoDAO.atualizarMedico(medico);
-        System.out.println("------------------");
+//        //######################### PACIENTES #########################
+//        Paciente paciente = new Paciente();
+//        PacienteDAO pacienteDAO = new PacienteDAO();
 
-        //######################### PACIENTES #########################
-        Paciente paciente = new Paciente();
-        PacienteDAO pacienteDAO = new PacienteDAO();
+//        paciente.setNome("Paciente Teste");
+//        paciente.setDataNascimento("22/22/2222");
+//        paciente.setNomeDaMae("Nome da mae teste");
+//        paciente.setNumeroCarteirinha(1);
+//        paciente.setIdCorPulseira(1);
+//        paciente.setCpf("222.222.222-22");
 
-        paciente.setNome("Paciente Teste");
-        paciente.setDataNascimento("22/22/2222");
-        paciente.setNomeDaMae("Nome da mae teste");
-        paciente.setNumeroCarteirinha(1);
-        paciente.setIdCorPulseira(1);
-        paciente.setCpf("222.222.222-22");
+//        System.out.println("---------COMANDOS PACIENTE---------");
+//        pacienteDAO.inserirPaciente(paciente);
+//        System.out.println("------------------");
+//        pacienteDAO.listarPaciente(paciente);
+//        System.out.println("------------------");
+//        //passa a id do paciente como parametro:
+//        pacienteDAO.deletarPaciente(0);
+//        System.out.println("------------------");
+//        pacienteDAO.atualizarPaciente(paciente);
+//
+//        //######################### MEDICAMENTOS #########################
+//        Medicamentos medicamentos = new Medicamentos();
+//        MedicamentoDAO medicamentoDAO = new MedicamentoDAO();
 
-        System.out.println("---------COMANDOS PACIENTE---------");
-        pacienteDAO.inserirPaciente(paciente);
-        System.out.println("------------------");
-        pacienteDAO.listarPaciente(paciente);
-        System.out.println("------------------");
-        //passa a id do paciente como parametro:
-        pacienteDAO.deletarPaciente(0);
-        System.out.println("------------------");
-        pacienteDAO.atualizarPaciente(paciente);
+//        medicamentos.setCodigo(1234);
+//        medicamentos.setNome("Reconter");
+//        medicamentos.setDosagem("50mg");
 
-        //######################### MEDICAMENTOS #########################
-        Medicamentos medicamentos = new Medicamentos();
-        MedicamentoDAO medicamentoDAO = new MedicamentoDAO();
-
-        medicamentos.setCodigo(1234);
-        medicamentos.setNome("Reconter");
-        medicamentos.setDosagem("50mg");
-
-        System.out.println("---------COMANDOS MEDICAMENTOS---------");
-        try {
-            medicamentoDAO.inserirMedicamento(medicamentos);
-        } catch (Exception e) {
-            System.out.println("Numero inválido ou medicamento já cadastrado");
-        }
-        System.out.println("------------------");
-        medicamentoDAO.listarMedicamento(medicamentos);
-        System.out.println("------------------");
-        //passa o codigo do medicamento como parametro:
-        medicamentoDAO.deletarMedicamento(0);
-        System.out.println("------------------");
-        medicamentoDAO.atualizarMedicamento(medicamentos);
+//        System.out.println("---------COMANDOS MEDICAMENTOS---------");
+//        try {
+//            medicamentoDAO.inserirMedicamento(medicamentos);
+//        } catch (Exception e) {
+//            System.out.println("Numero inválido ou medicamento já cadastrado");
+//        }
+//        System.out.println("------------------");
+//        medicamentoDAO.listarMedicamento(medicamentos);
+//        System.out.println("------------------");
+//        //passa o codigo do medicamento como parametro:
+//        medicamentoDAO.deletarMedicamento(0);
+//        System.out.println("------------------");
+//        medicamentoDAO.atualizarMedicamento(medicamentos);
 
         //######################### SERVICOS #########################
-        ServicoPrestado servicoPrestado = new ServicoPrestado();
-        ServicoPrestadoDAO servicoPrestadoDAO = new ServicoPrestadoDAO();
+//        ServicoPrestado servicoPrestado = new ServicoPrestado();
+//        ServicoPrestadoDAO servicoPrestadoDAO = new ServicoPrestadoDAO();
 
 
-        servicoPrestado.setDescricao("Teste");
-        servicoPrestado.setCodigoTipoServico(1);
-
-        System.out.println("---------COMANDOS SERVICOS---------");
-        servicoPrestadoDAO.inserirServicoPrestado(servicoPrestado);
-        System.out.println("------------------");
-        servicoPrestadoDAO.listarServicoPrestado(servicoPrestado);
-        System.out.println("------------------");
-        //passa o numero do serviço como parametro:
-        servicoPrestadoDAO.deletarServico(0);
-        System.out.println("------------------");
-        servicoPrestadoDAO.atualizarServico(servicoPrestado);
+//        servicoPrestado.setDescricao("Teste");
+//        servicoPrestado.setCodigoTipoServico(1);
+//
+//        System.out.println("---------COMANDOS SERVICOS---------");
+//        servicoPrestadoDAO.inserirServicoPrestado(servicoPrestado);
+//        System.out.println("------------------");
+//        servicoPrestadoDAO.listarServicoPrestado(servicoPrestado);
+//        System.out.println("------------------");
+//        //passa o numero do serviço como parametro:
+//        servicoPrestadoDAO.deletarServico(0);
+//        System.out.println("------------------");
+//        servicoPrestadoDAO.atualizarServico(servicoPrestado);
 
         //######################### ATENDIMENTO #########################
-        //LEONARDO
-        Atendimento atendimento = new Atendimento();
-        AtendimentoDAO atendimentoDAO = new AtendimentoDAO();
+//        //LEONARDO
+//        Atendimento atendimento = new Atendimento();
+//        AtendimentoDAO atendimentoDAO = new AtendimentoDAO();
 
-        try {
-            atendimento.setData("00/00/0000");
-            atendimento.setIdPaciente(8);
-            atendimento.setIdMedico(30);
-            atendimento.setIdServico(1);
-            atendimento.setIdMedicamento(1234);
+//        try {
+//            atendimento.setData("00/00/0000");
+//            atendimento.setIdPaciente(8);
+//            atendimento.setIdMedico(30);
+//            atendimento.setIdServico(1);
+//            atendimento.setIdMedicamento(1234);
 
-            System.out.println("---------COMANDOS ATENDIMENTO---------");
-            atendimentoDAO.inserirAtendimento(atendimento);
-            System.out.println("------------------");
-            atendimentoDAO.listarAtendimento(atendimento);
-            System.out.println("------------------");
-            atendimentoDAO.deletarAtendimento(0);
-            System.out.println("------------------");
-            atendimentoDAO.atualizarAtendimento(atendimento);
-        } catch (Exception e) {
-            System.out.println("Os valores que voce digitou nao estao corretos!");
-        }
+//            System.out.println("---------COMANDOS ATENDIMENTO---------");
+//            atendimentoDAO.inserirAtendimento(atendimento);
+//            System.out.println("------------------");
+//            atendimentoDAO.listarAtendimento(atendimento);
+//            System.out.println("------------------");
+//            atendimentoDAO.deletarAtendimento(0);
+//            System.out.println("------------------");
+//            atendimentoDAO.atualizarAtendimento(atendimento);
+//        } catch (Exception e) {
+//            System.out.println("Os valores que voce digitou nao estao corretos!");
+//        }
     }
 }
-        //######################### TENTATIVA DE FAZER UM MENU QUE SERIA MUDADO PRA UMA CLASSE MENU POSTERIORMENTE #########################
+//######################### TENTATIVA DE FAZER UM MENU QUE SERIA MUDADO PRA UMA CLASSE MENU POSTERIORMENTE #########################
 //        System.out.println("------ SG SAUDE ------");
 //        System.out.println();
 //        System.out.println("Selecione o que deseja fazer:\n" +
