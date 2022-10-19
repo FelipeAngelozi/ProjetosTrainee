@@ -1,13 +1,7 @@
 package br.com.sgsistemas.trainee.sgERPDB;
 
-import br.com.sgsistemas.trainee.sgERPDB.DAO.CidadeDAO;
-import br.com.sgsistemas.trainee.sgERPDB.DAO.ClienteDAO;
-import br.com.sgsistemas.trainee.sgERPDB.DAO.EnderecoDAO;
-import br.com.sgsistemas.trainee.sgERPDB.DAO.UFDAO;
-import br.com.sgsistemas.trainee.sgERPDB.model.Cidade;
-import br.com.sgsistemas.trainee.sgERPDB.model.Cliente;
-import br.com.sgsistemas.trainee.sgERPDB.model.Endereco;
-import br.com.sgsistemas.trainee.sgERPDB.model.UF;
+import br.com.sgsistemas.trainee.sgERPDB.DAO.*;
+import br.com.sgsistemas.trainee.sgERPDB.model.*;
 import br.com.sgsistemas.trainee.sgERPDB.util.JPAUtil;
 
 import javax.persistence.EntityManager;
@@ -20,6 +14,8 @@ public class Main {
 
         EntityManager entityManager = JPAUtil.getEntityManager();
         entityManager.getTransaction().begin();
+
+
 
         UF uf = new UF();
         UFDAO ufDAO = new UFDAO(entityManager);
