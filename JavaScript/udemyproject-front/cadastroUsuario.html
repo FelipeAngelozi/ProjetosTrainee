@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="userCRUD">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/userCtrl.js"></script>
+</head>
+<body ng-controller="userCtrl">
+    <div class="jumbotron">
+        <h3 class="userTitle">Cadastro de Usuário</h3>
+        <div class="centralSpace">
+            <input class="form-control" type="text" ng-model="user.name" placeholder="Nome">
+            <input class="form-control" type="text" ng-model="user.email" placeholder="E-mail">
+            <input class="form-control" type="text" ng-model="user.phone" placeholder="Telefone">
+            <input class="form-control" type="password" ng-model="user.password" placeholder="Senha">
+        </div>
+
+        <button class="btn btn-primary btn-block" ng-click="registerUser(user)">Cadastrar</button>
+    </div>
+</body>
+</html>

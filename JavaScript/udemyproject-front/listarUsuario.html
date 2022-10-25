@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="userCRUD">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/userCtrl.js"></script>
+</head>
+<body ng-controller="userCtrl">
+    <div class="jumbotron">
+        <h3 class="userTitle">Usuários Registrados</h3>
+        
+        <div class="alert alert-danger" ng-if="message">{{message}}</div>
+    <table class="table table-striped centralSpace">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+        <tr ng-repeat="user in users | orderBy:'+id'">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td><a ng-click="loadUser(user)">Atualizar</a></td>
+            <td><a ng-click="deleteUser(user)">Deletar</a></td>
+        </tr>
+    </table>
+
+    <h3 class="userTitle">Atualizacão de Usuário</h3>
+        <div class="centralSpace">
+            <input class="form-control" type="text" ng-model="user.name" placeholder="Nome">
+            <input class="form-control" type="text" ng-model="user.email" placeholder="E-mail">
+            <input class="form-control" type="text" ng-model="user.phone" placeholder="Telefone">
+            <input class="form-control" type="password" ng-model="user.password" placeholder="Senha">
+        </div>
+
+        <button class="btn btn-primary btn-block" ng-click="updateUser(user)">Atualizar</button>
+    </div>
+    
+</body>
+</html>

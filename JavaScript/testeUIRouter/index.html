@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste UIRouter</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-messages.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.30/angular-ui-router.js"></script>
+
+</head>
+<body ng-app="app">
+    <!-- <a href="#/">Home!</a> |
+    <a href="#/first-msg">First message!</a> |
+    <a href="#/second-msg">Second message!</a> passando a url
+    <a ui-sref="firstMessage()"></a>
+    <a ui-sref="secondMessage()"></a>     modo de passar direto o nome do estado-->
+    
+    <div class="row">
+        <div class="col-sm-12 well">
+            header | <a href="#/">Home</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 well">
+            <ul>
+                <li><a href="#/first-msg">First message!</a></li>
+                <li><a href="#/second-msg">Second message!</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 well"></div>
+            <div ui-view>
+
+            </div>
+        </div>
+    </div>    
+
+</body>
+</html>
