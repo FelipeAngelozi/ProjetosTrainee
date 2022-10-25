@@ -28,11 +28,15 @@
     <div class="row">
         <div class="col-sm-3 well">
             <ul>
-                <li><a href="#/first-msg">First message!</a></li>
-                <li><a href="#/second-msg">Second message!</a></li>
+                <li><a href="#/first-msg/15/25">First message!</a></li>
+                <li><a ui-sref="secondMessage({c:35,d:45})">Second message!</a></li>
+                <li><a ui-sref="thirdMessage({e:71})">Third message!</a></li>
+                <li><a ui-sref="thirdMessage2({e:1,f:9})">Thrid message with two Params!</a></li>
+                <li><a ui-sref="fourthMessage()">Fourth Message!</a></li>
+                <li><a ui-sref="fifthMessage()">Fifth Message!</a></li>
             </ul>
         </div>
-        <div class="col-sm-9 well"></div>
+        <div class="col-sm-9 well">
             <div ui-view>
 
             </div>
